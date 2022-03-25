@@ -7,6 +7,10 @@ app.config['SECRET_KEY'] = "very-cool"
 
 debug = DebugToolbarExtension(app)
 
+@app.route('/')
+def show_home():
+	return render_template('base.html')
+
 @app.route('/form-1')
 def show_form_1():
 	return render_template('form-1.html')
