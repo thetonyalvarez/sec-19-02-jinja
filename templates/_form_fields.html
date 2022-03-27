@@ -1,10 +1,8 @@
 {% block form_fields %}
-<div class="form-group">
-	{{ render_field(form.place) }}
-	{{ render_field(form.noun) }}
-	{{ render_field(form.verb) }}
-	{{ render_field(form.adjective) }}
-	{{ render_field(form.plural_noun) }}
-</div>
-<button>Submit</button>
+	{{ render_field(form.place, class='form-control') }}
+	{{ render_field(form.noun, class='form-control') }}
+	{{ render_field(form.verb, class='form-control') }}
+	{{ render_field(form.adjective, class='form-control') }}
+	{{ render_field(form.plural_noun, class='form-control') }}
+	<button class="btn btn-primary w-100">Submit</button>
 {% endblock %}
