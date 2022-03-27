@@ -1,0 +1,10 @@
+{% block form_fields %}
+<div class="form-group">
+	{{ render_field(form.place) }}
+	{{ render_field(form.noun) }}
+	{{ render_field(form.verb) }}
+	{{ render_field(form.adjective) }}
+	{{ render_field(form.plural_noun) }}
+</div>
+<button>Submit</button>
+{% endblock %}

@@ -1,26 +1,9 @@
-{% extends "base.html" %} {% block content %}
-<h1>A Long Time Ago</h1>
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{title}}</h2>
+{% from "_formhelpers.html" import render_field %}
 <form action="/story-1">
-	<div class="form-group">
-		<label for="place">Place</label>
-		<input class="form-control" id="place" name="place" type="text" />
-	</div>
-	<div class="form-group">
-		<label for="noun">Noun</label>
-		<input class="form-control" id="noun" name="noun" type="text" />
-	</div>
-	<div class="form-group">
-		<label for="verb">Verb</label>
-		<input class="form-control" id="verb" name="verb" type="text" />
-	</div>
-	<div class="form-group">
-		<label for="adjective">Adjective</label>
-		<input class="form-control" id="adjective" name="adjective" type="text" />
-	</div>
-	<div class="form-group">
-		<label for="plural_noun">Plural Noun</label>
-		<input class="form-control" id="plural_noun" name="plural_noun" type="text"/>
-	</div>
-	<button class="btn btn-block btn-primary">Submit</button>
+	{% include '_form_fields.html' %}
 </form>
 {% endblock %}
